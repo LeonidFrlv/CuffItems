@@ -1,0 +1,10 @@
+name: CuffItems
+version: '${project.version}'
+main: org.s1queence.plugin.CuffItems
+api-version: '1.18'
+depend: [S1queenceLib]
+commands:
+  cuffItems:
+    permission: "ci.perms.operator"
+    usage: /ci <reload, get, cuff, uncuff> <...>
+    aliases: [ci]

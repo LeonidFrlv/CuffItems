@@ -1,0 +1,67 @@
+
+#special
+# %plugin% - чтобы вставить название плагина
+# %username% -  ник игрока, для target это ник player, для player это ник target (только для cuff_process_messages и unCuff_process)
+# %progress_bar% - чтобы вставить progress bar в строку (только для каждого every_tick в cuff_process_messages).
+# %percent% - сколько выполнено (в процентах) (только для каждого every_tick в cuff_process_messages).
+
+onEnable_msg: "%plugin% &aБыл включен!"
+onDisable_msg: "%plugin% &cБыл выключен!"
+onReload_msg: "%plugin% &eКонфиг был обновлён!"
+player_not_found: "&cИгрок не найден."
+unknown_item: "&cНеизвестный предмет!"
+not_cuffed: "&eНичего не изменилось: игрок и так не был закован..."
+
+# Оставь пробел если хочешь отключить сообщение (иначе всё сломается)
+cuff_process_messages:
+  every_tick: #рекомендую использовать только вместе с progress_bar
+    action_bar_both: "%percent%% %progress_bar%"
+    player:
+      title: " "
+      subtitle: "Вы &cзаковываете &6%username%"
+    target:
+      title: " "
+      subtitle: "Вас &cзаковывает &6%username%"
+  complete:
+    action_bar_both: " "
+    player:
+      title: " "
+      subtitle: "&c&lЗакован успешно!"
+    target:
+      title: "&c&lВас заковали!"
+      subtitle: "Некоторые действия временно недоступны"
+  cancel:
+    action_bar_both: " "
+    player:
+      title: " "
+      subtitle: "Действие прервано!"
+    target:
+      title: " "
+      subtitle: "Действие прервано!"
+
+# Оставь пробел если хочешь отключить сообщение (иначе всё сломается)
+unCuff_process_messages:
+  every_tick: #рекомендую использовать только вместе с progress_bar
+    action_bar_both: "%percent%% %progress_bar%"
+    player:
+      title: " "
+      subtitle: "Вы &cосвобождаете &6%username%"
+    target:
+      title: " "
+      subtitle: "Вас &cосвобождает &6%username%"
+  complete:
+    action_bar_both: " "
+    player:
+      title: " "
+      subtitle: "&c&lПредмет снят!"
+    target:
+      title: " "
+      subtitle: "&c&lПредмет снят!"
+  cancel:
+    action_bar_both: " "
+    player:
+      title: " "
+      subtitle: "Действие прервано!"
+    target:
+      title: " "
+      subtitle: "Действие прервано!"

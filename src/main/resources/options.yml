@@ -1,0 +1,18 @@
+# permissions
+# ci.perms.operator - пермишен для reload и прочего функционала команды cuffItems (ci).
+# ci.perms.blocker_immune - у игрока с этим пермишеном не могут быть заблокированы руки после связывания
+
+
+# ссылка на ресурс-пак. Обычный reload тут не поможет. Перезапустите сервер если его меняете.
+resource_pack: "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1mqp-mOke01rreGcvUEgsaA710jzS2l2y"
+# если true, тогда пакет ресурсов по ссылке выше встанет поверх серверного ресурс-пака, а иначе скачайте ресурс-пак по ссылке и пользуйтесь его файлами!
+set_resource_pack: false
+
+progress_bar:
+  max_bars: 15
+  symbol: '|||'
+  border_left: '&8{'
+  border_right: '&8}'
+  color: f
+  complete_color: '7'
+  percent_color: 'e'
